@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kingside: free 3D chess for Windows and Mac</title>
+<meta name="description" content="Kingside 1.0 is a free 3D chess game for Windows and Mac. Seventeen opponents from 250 to 3000, online games with friends on either computer, 112 coached lessons and 440 puzzles.">
+<meta property="og:title" content="Kingside 1.0: free 3D chess for Windows and Mac">
+<meta property="og:description" content="Seventeen opponents, your friends on Mac or Windows, 112 coached lessons and 440 puzzles, on one walnut board. Free.">
+<meta property="og:image" content="img/01-home.webp">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage" aria-hidden="true">
+  <img class="shot on" data-for="top" src="img/01-home.webp" alt="" width="1920" height="1080" fetchpriority="high">
+  <img class="shot" data-for="opponents" src="img/03-game-coach.webp" alt="" width="1920" height="1080" loading="lazy">
+  <img class="shot" data-for="friends" src="img/02-choose-bot.webp" alt="" width="1920" height="1080" loading="lazy">
+  <img class="shot" data-for="lessons" src="img/05-learn.webp" alt="" width="1920" height="1080" loading="lazy">
+  <img class="shot" data-for="puzzles" src="img/06-puzzles.webp" alt="" width="1920" height="1080" loading="lazy">
+</div>
+
+<header class="bar">
+  <a class="skip" href="#opponents">Skip to the page</a>
+  <nav aria-label="Main">
+    <a href="#opponents">Opponents</a>
+    <a href="#friends">Friends</a>
+    <a href="#lessons">Lessons</a>
+    <a href="#questions">Questions</a>
+    <a class="bar-go" href="#download">Download</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="top" data-shot="top">
+    <div class="hero-copy">
+      <p class="hero-line rise">Free 3D chess for Windows and Mac. Seventeen opponents, your friends, 112 lessons and 440 puzzles, all on one walnut board.</p>
+      <div class="hero-act rise">
+        <a class="btn" href="#download">Download Kingside 1.0</a>
+        <span class="hero-note">Free. No ads, no subscription.</span>
+      </div>
+    </div>
+    <h1 class="mark"><span class="mark-word">kingside</span><span class="sr"> 1.0, free 3D chess for Windows and Mac</span></h1>
+    <figure class="hero-pic">
+      <img src="img/01-home.webp" alt="The Kingside board in walnut and maple, with the list of computer opponents beside it" width="1920" height="1080">
+    </figure>
+  </section>
+
+  <div class="col">
+    <section class="block" id="opponents" data-shot="opponents" aria-labelledby="h-opp">
+      <h2 id="h-opp" class="rise">Seventeen opponents</h2>
+      <p class="lead rise">From Pip, who learned chess last week, to full-strength Stockfish. Each one plays in character and talks while it thinks.</p>
+      <div class="ladder rise" data-ui>
+        <label class="ladder-label" for="rating">Your rating <output id="rating-out" for="rating">900</output></label>
+        <input id="rating" type="range" min="250" max="3000" step="50" value="900" aria-describedby="ladder-hint">
+        <p id="ladder-hint" class="ladder-hint">Slide to find the opponent at your level.</p>
+        <div class="foe" aria-live="polite">
+          <p class="foe-name"><span id="foe-name">Coach Riley</span> <span class="foe-elo" id="foe-elo">900</span></p>
+          <p class="foe-tag" id="foe-tag">Solid, patient, punishes hanging pieces.</p>
+          <p class="foe-tier" id="foe-tier">Intermediate</p>
+        </div>
+      </div>
+      <p class="rise">Turn on coaching and a coach grades every move, warns you about threats and explains your mistakes out loud. Hints and takebacks are there when you want them, and off when you don't.</p>
+      <details class="all rise">
+        <summary>All seventeen</summary>
+        <ul class="all-list" id="all-list">
+          <li><span>Pip</span><span class="num">250</span></li>
+          <li><span>Grandma Odette</span><span class="num">450</span></li>
+          <li><span>Tumble</span><span class="num">600</span></li>
+          <li><span>Coach Riley</span><span class="num">900</span></li>
+          <li><span>Captain Brine</span><span class="num">1000</span></li>
+          <li><span>Sable</span><span class="num">1100</span></li>
+          <li><span>Sir Percival</span><span class="num">1200</span></li>
+          <li><span>Professor Lumen</span><span class="num">1300</span></li>
+          <li><span>Chef Basil</span><span class="num">1400</span></li>
+          <li><span>Vex</span><span class="num">1500</span></li>
+          <li><span>DJ Volt</span><span class="num">1600</span></li>
+          <li><span>Marisol</span><span class="num">1700</span></li>
+          <li><span>Atlas</span><span class="num">1900</span></li>
+          <li><span>Orrin the Wizard</span><span class="num">2000</span></li>
+          <li><span>The Duke</span><span class="num">2200</span></li>
+          <li><span>Nyx</span><span class="num">2500</span></li>
+          <li><span>Kingside Engine</span><span class="num">3000</span></li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="block" id="friends" data-shot="friends" aria-labelledby="h-friends">
+      <h2 id="h-friends" class="rise">Play your friends</h2>
+      <p class="lead rise">Mac and Windows play on the same server, so it doesn't matter which computer your friends have.</p>
+      <div class="invite rise" data-ui>
+        <p class="invite-title">Invite code</p>
+        <p class="invite-code num" aria-label="Invite code K 7 Q M 2 X">K7QM2X</p>
+        <p class="invite-meta">Rated <span class="num">5 + 3</span>. Anyone with Kingside can join with this code. It works once, for a day.</p>
+        <div class="invite-btns">
+          <button type="button" class="btn btn-small" data-copy="K7QM2X">Copy code</button>
+          <button type="button" class="btn btn-small btn-quiet" data-copy="kingside://join/K7QM2X">Copy link</button>
+        </div>
+      </div>
+      <ul class="facts rise">
+        <li><strong>Make an account in seconds.</strong> A username and a password. That's all.</li>
+        <li><strong>Invite by name, code or link.</strong> Friends see a green dot when they're online, and the link opens Kingside straight to the game.</li>
+        <li><strong>Real clocks.</strong> Bullet <span class="num">1 + 0</span> up to classical <span class="num">30 + 0</span>, with premoves.</li>
+        <li><strong>The whole table.</strong> Chat, draw offers, takebacks, resign and rematch.</li>
+        <li><strong>A rating that means something.</strong> Glicko-2, starting at <span class="num">1500</span>. The server checks every move, so nobody can cheat.</li>
+        <li><strong>Want strangers?</strong> Connect your Lichess account and play its pool from the same board.</li>
+      </ul>
+    </section>
+
+    <section class="block" id="lessons" data-shot="lessons" aria-labelledby="h-learn">
+      <h2 id="h-learn" class="giant rise">Learn</h2>
+      <p class="lead rise">112 lessons in nine tracks. A coach narrates each one and moves the pieces as they talk.</p>
+      <div class="tracks rise">
+        <details open>
+          <summary><span>First Moves</span><span class="tk-meta">12 lessons, beginner</span></summary>
+          <ul><li>The Board and Squares</li><li>How the Rook Moves</li><li>The Knight</li><li>Castling</li><li>Checkmate vs Stalemate</li></ul>
+        </details>
+        <details>
+          <summary><span>Winning Basics</span><span class="tk-meta">12 lessons, beginner</span></summary>
+          <ul><li>Piece Values</li><li>Don't Hang Pieces</li><li>Counting Attackers and Defenders</li><li>Mate with Queen and King</li><li>The Two-Rook Ladder Mate</li></ul>
+        </details>
+        <details>
+          <summary><span>Tactics</span><span class="tk-meta">16 lessons, intermediate</span></summary>
+          <ul><li>Forks: Two for One</li><li>The Knight Fork</li><li>Pins: Absolute and Relative</li><li>Skewers: The Pin in Reverse</li><li>Discovered Attacks</li></ul>
+        </details>
+        <details>
+          <summary><span>Checkmate Patterns</span><span class="tk-meta">12 lessons, intermediate</span></summary>
+          <ul><li>Smothered Mate</li><li>Anastasia's Mate</li><li>Arabian Mate</li><li>Boden's Mate</li><li>Epaulette Mate</li></ul>
+        </details>
+        <details>
+          <summary><span>Openings</span><span class="tk-meta">16 lessons, intermediate</span></summary>
+          <ul><li>The Italian Game</li><li>The Ruy Lopez</li><li>The Scotch Game</li><li>The Four Knights</li><li>The King's Gambit</li></ul>
+        </details>
+        <details>
+          <summary><span>Strategy</span><span class="tk-meta">14 lessons, advanced</span></summary>
+          <ul><li>Good vs Bad Bishops</li><li>Outposts</li><li>Open Files and Rooks</li><li>The Seventh Rank</li><li>Pawn Structure Basics</li></ul>
+        </details>
+        <details>
+          <summary><span>Endgames</span><span class="tk-meta">14 lessons, advanced</span></summary>
+          <ul><li>King Activity</li><li>The Opposition</li><li>Key Squares</li><li>The Rule of the Square</li><li>King and Pawn vs King</li></ul>
+        </details>
+        <details>
+          <summary><span>Attack and Defence</span><span class="tk-meta">8 lessons, advanced</span></summary>
+          <ul><li>Attacking the Castled King</li><li>Pawn Storms</li><li>The Classic Bishop Sacrifice on h7</li><li>Opposite-Side Castling Races</li><li>Defending Under Pressure</li></ul>
+        </details>
+        <details>
+          <summary><span>Classic Games</span><span class="tk-meta">8 lessons, mastery</span></summary>
+          <ul><li>Morphy's Opera Game, Paris 1858</li><li>Anderssen's Immortal Game, London 1851</li><li>Anderssen's Evergreen Game, Berlin 1852</li><li>Byrne vs Fischer, the Game of the Century, 1956</li><li>Lasker vs Bauer, Amsterdam 1889</li></ul>
+        </details>
+      </div>
+    </section>
+
+    <section class="block" id="puzzles" data-shot="puzzles" aria-labelledby="h-puz">
+      <h2 id="h-puz" class="rise">Puzzles and review</h2>
+      <p class="lead rise">440 puzzles from real games, and a full review of every game you finish.</p>
+      <dl class="modes rise">
+        <div><dt>Rated</dt><dd>Puzzles that follow your rating up as you solve them.</dd></div>
+        <div><dt>Sprint</dt><dd>As many as you can before the clock runs out.</dd></div>
+        <div><dt>Daily</dt><dd>One new puzzle every day.</dd></div>
+        <div><dt>Themes</dt><dd>Forks, pins, mates in two: practise the one you keep missing.</dd></div>
+      </dl>
+      <figure class="inline-pic rise">
+        <img src="img/06-puzzles.webp" alt="A rated puzzle in Kingside: white to move, find the best move" width="1920" height="1080" loading="lazy">
+        <figcaption>A rated puzzle. White to move.</figcaption>
+      </figure>
+      <p class="rise">After a game, the review marks your best and worst moves, shows the better line on the board and lets you replay any position.</p>
+    </section>
+  </div>
+
+  <section class="get" id="download" aria-labelledby="h-get">
+    <div class="get-words">
+      <h2 id="h-get">Your move.</h2>
+      <p>Kingside 1.0 is free. Choose your computer and the download starts. It's about 200 MB.</p>
+    </div>
+    <div class="dialog" data-ui role="group" aria-labelledby="dl-title">
+      <p class="dialog-title" id="dl-title">Download Kingside 1.0</p>
+      <div class="seg" role="radiogroup" aria-label="Computer">
+        <button type="button" role="radio" aria-checked="true" data-os="win">Windows</button>
+        <button type="button" role="radio" aria-checked="false" data-os="mac">Mac</button>
+      </div>
+      <div class="seg seg-chip" role="radiogroup" aria-label="Mac chip" hidden>
+        <button type="button" role="radio" aria-checked="true" data-chip="arm">Apple Silicon</button>
+        <button type="button" role="radio" aria-checked="false" data-chip="intel">Intel</button>
+      </div>
+      <p class="dialog-note" id="dl-note">Windows 10 or 11, 64-bit. If Windows warns you, click More info, then Run anyway.</p>
+      <a class="btn btn-wide" id="dl-go" href="https://github.com/Wisestcatlyfriend/kingside-chess/releases/download/v1.0.0/Kingside_1.0.0_x64-setup.exe">Download for Windows</a>
+      <p class="dialog-alt">Other computers: <a href="https://github.com/Wisestcatlyfriend/kingside-chess/releases/download/v1.0.0/Kingside_1.0.0_aarch64.dmg">Mac with Apple Silicon</a>, <a href="https://github.com/Wisestcatlyfriend/kingside-chess/releases/download/v1.0.0/Kingside_1.0.0_x64.dmg">Mac with Intel</a>, <a href="https://github.com/Wisestcatlyfriend/kingside-chess/releases/download/v1.0.0/Kingside_1.0.0_x64-setup.exe">Windows</a>.</p>
+    </div>
+  </section>
+
+  <section class="faq" id="questions" aria-labelledby="h-faq">
+    <h2 id="h-faq">Questions</h2>
+    <div class="faq-text">
+      <p><strong>Is it really free?</strong> Yes. No ads, no subscription and nothing to buy inside the game.</p>
+      <p><strong>Do I need an account?</strong> Only to play friends on Kingside Online. The bots, lessons and puzzles work without one.</p>
+      <p><strong>Can Mac and Windows players play each other?</strong> Yes. Both apps use the same server, ratings and invite codes.</p>
+      <p><strong>Why does Windows warn me when I install it?</strong> Kingside isn't code-signed yet, so Windows doesn't recognise it. Click More info, then Run anyway.</p>
+      <p><strong>How do I open it on a Mac?</strong> Drag Kingside into Applications and open it once. When macOS stops it, open System Settings, go to Privacy &amp; Security and click Open Anyway.</p>
+      <p><strong>Which Mac do I have?</strong> Open the Apple menu and choose About This Mac. A chip named Apple M1 or later means Apple Silicon; a processor named Intel means Intel.</p>
+      <p><strong>What does it need?</strong> Windows 10 or 11 (64-bit), or macOS 11 or newer. A graphics card from the last few years keeps the 3D board smooth; there are lighter settings for older ones.</p>
+      <p><strong>Does it work offline?</strong> Bots, lessons, puzzles and reviews do. Online games need the internet.</p>
+      <p><strong>Where do my games go?</strong> Games and settings stay on your computer. An online account keeps your username, your rating and your online games.</p>
+      <p><strong>Does the coach really talk?</strong> Yes, with a natural voice that runs on your computer. The first time it speaks it downloads its voice, about 90 MB.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="foot-what">Kingside 1.0, free 3D chess</span>
+  <span class="foot-links"><a href="#download">Download</a><a href="https://github.com/Wisestcatlyfriend/kingside-chess/releases">All releases</a><a href="#questions">Questions</a></span>
+  <span class="foot-year">2026</span>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
